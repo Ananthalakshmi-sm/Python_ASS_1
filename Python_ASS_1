@@ -1,0 +1,2340 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Basic Syntax & IO\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "s2j8H7qlA-e3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GkIebwKHB8kV",
+        "outputId": "e378c396-3633-40ff-db9b-add5312ee198"
+      },
+      "source": [
+        "#1.Print \"Hello, World!\"\n",
+        "\n",
+        "print(\"Hello,world!\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello,world!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2.Take user input and print it\n",
+        "\n",
+        "name=input(\"enter your name:\")\n",
+        "print(\"your entered\",name)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XSGbfWCyCbfa",
+        "outputId": "168493fc-cd44-4781-872b-ef519859d454"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter your name:meghana\n",
+            "your entered meghana\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3.Swap two variables\n",
+        "\n",
+        "a=int(input(\"enter value of a:\"))\n",
+        "b=int(input(\"enter value of b:\"))\n",
+        "\n",
+        "temp = a\n",
+        "a = b\n",
+        "b = temp\n",
+        "\n",
+        "print(\"value of a after swapping:\",a)\n",
+        "print(\"value of b after swapping:\",b)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fKPM9FieC5IO",
+        "outputId": "b3bfd08c-0b15-4f88-bc75-f6a1c74cd662"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter value of a:11\n",
+            "enter value of b:12\n",
+            "value of a after swapping: 12\n",
+            "value of b after swapping: 11\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Check if a number is even or odd\n",
+        "num=int(input(\"enter the number:\"))\n",
+        "if num%2==0:\n",
+        "  print(\"its a even number\")\n",
+        "else:\n",
+        "  print(\"its a odd number\")"
+      ],
+      "metadata": {
+        "id": "ivoNvwqHDyXM",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "36df34b0-5ff9-47d3-ca2c-368798fb8f95"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number:13\n",
+            "its a odd number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Find the largest of two numbers\n",
+        "\n",
+        "num1=int(input(\"enter the 1st number:\"))\n",
+        "num2=int(input(\"enter the 2nd number:\"))\n",
+        "if num1>num2:\n",
+        "  print(\"the largest number is\",num1)\n",
+        "else:\n",
+        "  print(\"the largest number is\",num2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DGPfoX6qEGP4",
+        "outputId": "01a9c878-5148-41a2-d035-5c1a9c6ed0c1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the 1st number:12\n",
+            "enter the 2nd number:11\n",
+            "the largest number is 12\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Operators"
+      ],
+      "metadata": {
+        "id": "0UUfI8udGIuK"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.Perform arithmetic operations (+, -, *, /, %, **), take any values as “a” and “b”\n",
+        "\n",
+        "a=float(input(\"enter the value of a:\"))\n",
+        "b=float(input(\"enter the value of b:\"))\n",
+        "print(f\"{a}+{b}={a+b}\")\n",
+        "print(f\"{a}-{b}={a-b}\")\n",
+        "print(f\"{a}*{b}={a*b}\")\n",
+        "print(f\"{a}/{b}={a/b}\")\n",
+        "print(f\"{a}%{b}={a%b}\")\n",
+        "print(f\"{a}**{b}={a**b}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GH7GI-YMGU3_",
+        "outputId": "2c091618-b649-4da2-e500-123debc5c6df"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the value of a:12\n",
+            "enter the value of b:11\n",
+            "12.0+11.0=23.0\n",
+            "12.0-11.0=1.0\n",
+            "12.0*11.0=132.0\n",
+            "12.0/11.0=1.0909090909090908\n",
+            "12.0%11.0=1.0\n",
+            "12.0**11.0=743008370688.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2.Calculate the square and cube of a number\n",
+        "num = float(input(\"Enter a number to find square and cube: \"))\n",
+        "print(f\"Square of {num} = {num ** 2}\")\n",
+        "print(f\"Cube of {num} = {num ** 3}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "k8kgI1CJHUoM",
+        "outputId": "8557aa38-da73-42b7-eaa4-74a252f51cdd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number to find square and cube: 5\n",
+            "Square of 5.0 = 25.0\n",
+            "Cube of 5.0 = 125.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3.Convert Celsius to Fahrenheit (F = (C * 9/5) + 32)\n",
+        "celsius = float(input(\"Enter temperature in Celsius: \"))\n",
+        "fahrenheit = (celsius * 9/5) + 32\n",
+        "print(f\"{celsius}°C = {fahrenheit}°F\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UcOPsNqicLgw",
+        "outputId": "7d18dba4-a277-44e8-98ce-031f421bcef6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter temperature in Celsius: 35\n",
+            "35.0°C = 95.0°F\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Convert kilometers to miles (1 km = 0.621371 miles)\n",
+        "\n",
+        "km = float(input(\"Enter distance in kilometers: \"))\n",
+        "miles = km * 0.621371\n",
+        "print(f\"{km} km = {miles} miles\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MtnOEfT5czth",
+        "outputId": "520415e5-76c5-4419-b791-0b26096526d4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter distance in kilometers: 50\n",
+            "50.0 km = 31.068550000000002 miles\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Check if a number is positive, negative, or zero\n",
+        "\n",
+        "num=int(input(\"enter the number:\"))\n",
+        "if num>0:\n",
+        "  print(\"its a positive number\")\n",
+        "elif num<0:\n",
+        "  print(\"its a negative number\")\n",
+        "else:\n",
+        "  print(\"number is equal\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SzK1jZR3dH0O",
+        "outputId": "285a4fa5-da79-40a6-bf3d-d03dfbc2e503"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number:-4\n",
+            "its a negative number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Conditional Statements"
+      ],
+      "metadata": {
+        "id": "pZ5Bffumd16-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.Find the largest of three numbers.\n",
+        "\n",
+        "num1=float(input(\"enter the 1st number:\"))\n",
+        "num2=float(input(\"enter the 2nd number:\"))\n",
+        "num3=float(input(\"enter the 3rd number:\"))\n",
+        "if num1>=num2 and num1>=num3:\n",
+        "  print(f\"the largest number is\", num1)\n",
+        "elif num2>=num1 and num2>=num3:\n",
+        "  print(f\"the largest number is\",num2)\n",
+        "elif num3>=num1 and num3>=num2:\n",
+        "  print(f\"the largest number is\",num3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jVXEWDKhd2lD",
+        "outputId": "cf0af88d-6e4d-4e4a-dce4-d2826ab77221"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the 1st number:12\n",
+            "enter the 2nd number:11\n",
+            "enter the 3rd number:15\n",
+            "the largest number is 15.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2.Check if a year is a leap year. A leap year is a year that is divisible by 4, but if it is a century year (divisible by 100), it must also be divisible by 400 to be a leap year.\n",
+        "\n",
+        "year=int(input(\"enter the year:\"))\n",
+        "if (year%4==0 and year%100!=0) or (year%400==0):\n",
+        "  print(year,\"its a leap year\")\n",
+        "else:\n",
+        "  print(year,\"its not a leap year\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IHA-oWB4fA86",
+        "outputId": "c75203a2-3492-4c9d-b7e7-e5680e5d40a3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the year:2024\n",
+            "2024 its a leap year\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3.Check if a character is a vowel or consonant\n",
+        "ch=input(\"enter the character:\")\n",
+        "if ch==['a','e','i','o','u']:\n",
+        "  print(ch,\"its a vowel\")\n",
+        "else:\n",
+        "  print(ch,\"its a consonant\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "drwB4a1HgDwZ",
+        "outputId": "36b73d0a-57eb-4d3b-d1d0-79be652fe31e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the character:b\n",
+            "b its a consonant\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Write a Python program to assign the grades to each subject based on the grade scale: Student subject marks: maths = 85 science = 78 english = 92 Grade scale: A: 90-100 B: 80-89 C: 70-79 D: 60-69 E: 50-59 F: Below 50\n",
+        "\n",
+        "def get_grade(marks):\n",
+        "    if 90 <= marks <= 100:\n",
+        "        return 'A'\n",
+        "    elif 80 <= marks <= 89:\n",
+        "        return 'B'\n",
+        "    elif 70 <= marks <= 79:\n",
+        "        return 'C'\n",
+        "    elif 60 <= marks <= 69:\n",
+        "        return 'D'\n",
+        "    elif 50 <= marks <= 59:\n",
+        "        return 'E'\n",
+        "    else:\n",
+        "        return 'F'\n",
+        "\n",
+        "# Student subject marks\n",
+        "maths = 85\n",
+        "science = 78\n",
+        "english = 92\n",
+        "\n",
+        "print(\"Maths Marks:\", maths, \"Grade:\", get_grade(maths))\n",
+        "print(\"Science Marks:\", science, \"Grade:\", get_grade(science))\n",
+        "print(\"English Marks:\", english, \"Grade:\", get_grade(english))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "v6iwNoO_jd5_",
+        "outputId": "fb9b010f-1b6f-4058-b6ae-1086c7dd515a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Maths Marks: 85 Grade: B\n",
+            "Science Marks: 78 Grade: C\n",
+            "English Marks: 92 Grade: A\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Write a program to check if a number is divisible by both 5 and 11\n",
+        "\n",
+        "num=int(input(\"enter the number:\"))\n",
+        "if num%5==0 and num%11==0:\n",
+        "  print(num,\"its divisiable by both 5 and 11\")\n",
+        "else:\n",
+        "  print(num,\"its not divisiable by both 5 and 11\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6VMQdhBojlds",
+        "outputId": "db628d94-c116-4b0f-e837-46867db5b2f8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number:55\n",
+            "55 its divisiable by both 5 and 11\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Loops"
+      ],
+      "metadata": {
+        "id": "pMDzRLZJlGLG"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.Print numbers from 1 to the given number N\n",
+        "N = int(input(\"Enter a number (N): \"))\n",
+        "print(\"Numbers from 1 to\", N)\n",
+        "for i in range(1, N + 1):\n",
+        "    print(i, end=\" \")\n",
+        "print()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3-z5_9fwlXOn",
+        "outputId": "c8eae75f-aa2b-4b66-cc19-246dec11b846"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number (N): 12\n",
+            "Numbers from 1 to 12\n",
+            "1 2 3 4 5 6 7 8 9 10 11 12 \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2.Print even numbers up to the given number N\n",
+        "n=int(input(\"enter the number:\"))\n",
+        "print(\"even numbers upto:\",n)\n",
+        "for i in range(2,n+1,2):\n",
+        "  print(i,end=\" \")\n",
+        "print()\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "u-LY56HmlyM1",
+        "outputId": "7687bf6e-1aff-4290-d837-883b971146cb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number:13\n",
+            "even numbers upto: 13\n",
+            "2 4 6 8 10 12 \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3.Sum of first N natural numbers (sum = n * (n+1) / 2)\n",
+        "N = int(input(\"Enter N to find sum of natural numbers: \"))\n",
+        "sum = N * (N + 1) // 2\n",
+        "print(f\"Sum of first {N} natural numbers = {sum}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UC5aBJ-7nIDB",
+        "outputId": "1ae1ff87-1331-47e8-fd83-e41f1e7777b5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter N to find sum of natural numbers: 12\n",
+            "Sum of first 12 natural numbers = 78\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Calculate the factorial of a number (n! = n × (n-1) × ... × 1) without using def function\n",
+        "num = int(input(\"Enter a number to find factorial: \"))\n",
+        "fact = 1\n",
+        "for i in range(1, num + 1):\n",
+        "    fact *= i\n",
+        "print(f\"Factorial of {num} = {fact}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "I9Mi9j24oFYy",
+        "outputId": "1aa7f5c7-47f5-4096-fcb5-c9d7cae1a9f5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number to find factorial: 6\n",
+            "Factorial of 6 = 720\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Print multiplication table of a number Example: 2*1 = 2 2*2 = 4\n",
+        "num = int(input(\"Enter a number to print its multiplication table: \"))\n",
+        "print(f\"Multiplication Table of {num}\")\n",
+        "for i in range(1, 11):\n",
+        "    print(f\"{num} * {i} = {num * i}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XdiA8L3Qo2yP",
+        "outputId": "9999ba94-ab8f-4bd7-a8d3-cd5a7ef10d6a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number to print its multiplication table: 9\n",
+            "Multiplication Table of 9\n",
+            "9 * 1 = 9\n",
+            "9 * 2 = 18\n",
+            "9 * 3 = 27\n",
+            "9 * 4 = 36\n",
+            "9 * 5 = 45\n",
+            "9 * 6 = 54\n",
+            "9 * 7 = 63\n",
+            "9 * 8 = 72\n",
+            "9 * 9 = 81\n",
+            "9 * 10 = 90\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Strings"
+      ],
+      "metadata": {
+        "id": "iCu7FM0cpZE3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.Write a program to Reverse a given string (at least 2 ways)\n",
+        "str=input(\"enter the string:\")\n",
+        "rev=str[::-1]\n",
+        "print(\"Reversed string\",rev)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-mqL7_jbpa_d",
+        "outputId": "72e68085-cba3-4379-daec-1f0a17a6691b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the string:meghana\n",
+            "Reversed string anahgem\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2.Count the number of vowels in a string\n",
+        "str=input(\"enter the string:\")\n",
+        "vowels=\"aeiouAEIOU\"\n",
+        "count=0\n",
+        "for char in str:\n",
+        "  if char in vowels:\n",
+        "    count+=1\n",
+        "print(\"number of vowels in string\",count)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Y9fOeTb0p400",
+        "outputId": "c20008f8-d7d1-41a7-8182-8cd0a9fe291e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the string:junnu\n",
+            "number of vowels in string 2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3.Check if a string is a palindrome\n",
+        "str=input(\"enter the string:\")\n",
+        "if str==str[::-1]:\n",
+        "  print(\"its a palindrome\")\n",
+        "else:\n",
+        "  print(\"its not a palindrome\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "k3tuBVbCwzmH",
+        "outputId": "d69fb276-ec4e-4dff-bd58-eaccd65a1fb4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the string:RACECAR\n",
+            "its a palindrome\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Convert uppercase to lowercase and vice versa\n",
+        "\n",
+        "text = input(\"Enter a string to change case: \")\n",
+        "converted = \"\"\n",
+        "\n",
+        "for ch in text:\n",
+        "    if ch.isupper():\n",
+        "        converted += ch.lower()\n",
+        "    elif ch.islower():\n",
+        "        converted += ch.upper()\n",
+        "    else:\n",
+        "        converted += ch\n",
+        "\n",
+        "print(\"Converted string:\", converted)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EETvwRHFyxnS",
+        "outputId": "6f64fe1a-0657-4e22-cb07-39ab2b01db30"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a string to change case: meghana\n",
+            "Converted string: MEGHANA\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Find the length of a string without using len() function\n",
+        "text = input(\"Enter a string to find its length: \")\n",
+        "count = 0\n",
+        "for i in text:\n",
+        "    count += 1\n",
+        "print(\"Length of the string:\", count)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ITKg1XN1zBQu",
+        "outputId": "982a333e-00d7-4e05-b36a-8d1baf858d3e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a string to find its length: python\n",
+            "Length of the string: 6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Lists"
+      ],
+      "metadata": {
+        "id": "7FDesYka0ga4"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.Find the largest element in a list\n",
+        "\n",
+        "numbers = list(map(int ,input(\"Enter numbers separated by space: \").split()))\n",
+        "\n",
+        "largest = numbers[0]\n",
+        "for num in numbers:\n",
+        "    if num > largest:\n",
+        "        largest = num\n",
+        "\n",
+        "print(\"Largest element in the list:\", largest)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Zx9TviYG0h3U",
+        "outputId": "fb01bdd5-6285-42dd-d064-40d690765159"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter numbers separated by space: 10  23  21  89  11\n",
+            "Largest element in the list: 89\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2.Find the smallest element in a list\n",
+        "\n",
+        "smallest = numbers[0]\n",
+        "for num in numbers:\n",
+        "    if num < smallest:\n",
+        "        smallest = num\n",
+        "\n",
+        "print(\"Smallest element in the list:\", smallest)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SOyYmUWC0nR4",
+        "outputId": "b876e74c-d968-450f-f1d9-fcf2c90262f2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Smallest element in the list: 10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3.Find the sum of elements in a list\n",
+        "total = 0\n",
+        "for num in numbers:\n",
+        "    total += num\n",
+        "\n",
+        "print(\"Sum of elements in the list:\", total)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MI6LVjji1PMY",
+        "outputId": "bc24eb14-3d87-4f3d-9c63-6d176b18f213"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Sum of elements in the list: 154\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Sort a list in ascending order\n",
+        "\n",
+        "numbers = list(map(int, input(\"Enter numbers separated by space: \").split()))\n",
+        "for i in range(len(numbers)):\n",
+        "    for j in range(i + 1, len(numbers)):\n",
+        "        if numbers[i] > numbers[j]:\n",
+        "            numbers[i], numbers[j] = numbers[j], numbers[i]\n",
+        "\n",
+        "print(\"List in ascending order:\", numbers)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zs2PXEHD1WjA",
+        "outputId": "ba6b6afe-ce3d-4b51-87bd-7fb41c57c893"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter numbers separated by space: 12  23  11 9  3  89\n",
+            "List in ascending order: [3, 9, 11, 12, 23, 89]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Remove duplicates from a list\n",
+        "\n",
+        "nums = list(map(int, input(\"\\nEnter numbers with duplicates: \").split()))\n",
+        "\n",
+        "unique_list = []\n",
+        "for num in nums:\n",
+        "    if num not in unique_list:\n",
+        "        unique_list.append(num)\n",
+        "\n",
+        "print(\"List after removing duplicates:\", unique_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gTefMGhr1rJh",
+        "outputId": "294a1e01-b27d-4d1f-adbc-8d5ddd705855"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Enter numbers with duplicates: 2 8 2 3 5 2 5 9 4\n",
+            "List after removing duplicates: [2, 8, 3, 5, 9, 4]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Tuples"
+      ],
+      "metadata": {
+        "id": "m69tZi1F2SMQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.Find the maximum and minimum number in a tuple\n",
+        "tup = tuple(map(int, input(\"Enter numbers separated by space: \").split()))\n",
+        "\n",
+        "max_num = tup[0]\n",
+        "min_num = tup[0]\n",
+        "\n",
+        "for num in tup:\n",
+        "    if num > max_num:\n",
+        "        max_num = num\n",
+        "    if num < min_num:\n",
+        "        min_num = num\n",
+        "\n",
+        "print(\"Maximum number:\", max_num)\n",
+        "print(\"Minimum number:\", min_num)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Y0Yde6LU2TcQ",
+        "outputId": "40d4658d-9f05-4719-a093-28fa194cf72b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter numbers separated by space: 7 6 5 2 7 8 2 7\n",
+            "Maximum number: 8\n",
+            "Minimum number: 2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2.Convert a tuple to a list\n",
+        "tup_list = list(tup)\n",
+        "print(\"Converted tuple to list:\", tup_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fwP--ntx2jV0",
+        "outputId": "cdaabdc7-cea8-42ac-b8b9-d643d8c62da8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Converted tuple to list: [7, 6, 5, 2, 7, 8, 2, 7]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3.Count occurrences of an element in a tuple\n",
+        "element = int(input(\"Enter element to count: \"))\n",
+        "count = 0\n",
+        "for num in tup:\n",
+        "    if num == element:\n",
+        "        count += 1\n",
+        "\n",
+        "print(f\"Element {element} occurs {count} time(s) in the tuple\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "z8WBrifw200E",
+        "outputId": "9eeee383-46c1-4c01-da46-9a2a015e4751"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter element to count: 7\n",
+            "Element 7 occurs 3 time(s) in the tuple\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Find the index of an element in a tuple\n",
+        "\n",
+        "element = int(input(\"Enter element to find index: \"))\n",
+        "index = -1\n",
+        "for i in range(len(tup)):\n",
+        "    if tup[i] == element:\n",
+        "        index = i\n",
+        "        break\n",
+        "\n",
+        "if index != -1:\n",
+        "    print(f\"Index of element {element}: {index}\")\n",
+        "else:\n",
+        "    print(\"Element not found in the tuple\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZY6s8dsj3CJh",
+        "outputId": "bcd96b8a-6fc3-4363-9e68-18a3b97297b6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter element to find index: 8\n",
+            "Index of element 8: 5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Reverse a tuple\n",
+        "rev_tup = tup[::-1]\n",
+        "print(\"Reversed tuple:\", rev_tup)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "U-dYhBhv3rH6",
+        "outputId": "f4c7d450-40c5-4190-b0f7-bcc7541a8a70"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Reversed tuple: (7, 2, 8, 7, 2, 5, 6, 7)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Sets\n"
+      ],
+      "metadata": {
+        "id": "IeZCaYGN7_Gu"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.Create empty set\n",
+        "my_set = set()\n",
+        "print(\"Empty set created:\", my_set)\n",
+        "print(\"Type:\", type(my_set))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ck_K1Qvm8Am0",
+        "outputId": "cc50ba03-0e6f-4b2d-cc6c-7193120505bc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Empty set created: set()\n",
+            "Type: <class 'set'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2.Perform union of two sets\n",
+        "set1 = set(map(int, input(\"\\nEnter elements of Set 1 separated by space: \").split()))\n",
+        "set2 = set(map(int, input(\"Enter elements of Set 2 separated by space: \").split()))\n",
+        "\n",
+        "union_set = set1.union(set2)\n",
+        "print(\"Union of Set 1 and Set 2:\", union_set)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "peYR7S9l8MPu",
+        "outputId": "24bfd5e0-7e19-4f5b-a007-49dd3b3c87a4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Enter elements of Set 1 separated by space: 2 3 4 5 6\n",
+            "Enter elements of Set 2 separated by space: 2 8 6 0 1 7\n",
+            "Union of Set 1 and Set 2: {0, 1, 2, 3, 4, 5, 6, 7, 8}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3.Perform intersection of two sets\n",
+        "intersection_set = set1.intersection(set2)\n",
+        "print(\"Intersection of Set 1 and Set 2:\", intersection_set)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jtRVkrUL8YkB",
+        "outputId": "becc23b1-cd22-4986-8db3-93ad6ff05e94"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Intersection of Set 1 and Set 2: {2, 6}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Perform difference of two sets\n",
+        "difference_set = set1.difference(set2)\n",
+        "print(\"Difference (Set 1 - Set 2):\", difference_set)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fzO7OZwP8n5B",
+        "outputId": "fd077cbd-0eaf-417c-e6f1-964f62becda5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Difference (Set 1 - Set 2): {3, 4, 5}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Check if a set is a subset of another\n",
+        "if set1.issubset(set2):\n",
+        "    print(\"Set 1 is a subset of Set 2\")\n",
+        "else:\n",
+        "    print(\"Set 1 is NOT a subset of Set 2\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eGe9OhbK8xBg",
+        "outputId": "bf1d9447-be21-4b57-c097-b7ed865cbcd9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Set 1 is NOT a subset of Set 2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#6.Remove an element from a set\n",
+        "element = int(input(\"Enter element to remove from Set 1: \"))\n",
+        "if element in set1:\n",
+        "    set1.remove(element)\n",
+        "    print(f\"Set 1 after removing {element}:\", set1)\n",
+        "else:\n",
+        "    print(\"Element not found in Set 1\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XSMmkB5I9EHH",
+        "outputId": "ee2565a9-6e73-4075-bc92-72f6e9dcd7df"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter element to remove from Set 1: 3\n",
+            "Set 1 after removing 3: {2, 4, 5, 6}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Dictionaries"
+      ],
+      "metadata": {
+        "id": "hlgb4D8h9zNS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.Create a dictionary and print keys & values\n",
+        "my_dict = {'maths': 85, 'science': 78, 'english': 92}\n",
+        "\n",
+        "print(\"Dictionary:\", my_dict)\n",
+        "print(\"Keys:\", my_dict.keys())\n",
+        "print(\"Values:\", my_dict.values())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nNJwElpQ91D-",
+        "outputId": "13b12ebf-9a7e-4d2b-d772-e68b23be69ac"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Dictionary: {'maths': 85, 'science': 78, 'english': 92}\n",
+            "Keys: dict_keys(['maths', 'science', 'english'])\n",
+            "Values: dict_values([85, 78, 92])\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2.Find the sum of dictionary values\n",
+        "sum_values = 0\n",
+        "for value in my_dict.values():\n",
+        "    sum_values += value\n",
+        "\n",
+        "print(\"Sum of dictionary values:\", sum_values)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9ZNEKA8M-BDJ",
+        "outputId": "3cb4b96b-1d64-4f8d-d303-2eff446d8f76"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Sum of dictionary values: 255\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3.Merge two dictionaries\n",
+        "dict1 = {'a': 1, 'b': 2}\n",
+        "dict2 = {'b': 3, 'c': 4}\n",
+        "\n",
+        "merged_dict = dict1.copy()\n",
+        "merged_dict.update(dict2)\n",
+        "print(\"Merged dictionary:\", merged_dict)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7XXODmm0-Iy5",
+        "outputId": "5194a8ee-16db-4384-b626-c15ae5e94eb7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Merged dictionary: {'a': 1, 'b': 3, 'c': 4}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Sort a dictionary by its values\n",
+        "sorted_dict = dict(sorted(my_dict.items(), key=lambda item: item[1]))\n",
+        "print(\"Dictionary sorted by values:\", sorted_dict)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "E1vr7Rgj-So0",
+        "outputId": "3a5e44ca-437d-4ded-a617-1424cfe1889e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Dictionary sorted by values: {'science': 78, 'maths': 85, 'english': 92}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Count the occurrences of elements in a dictionary\n",
+        "example_dict = {'a': 1, 'b': 2, 'c': 1, 'd': 2, 'e': 3}\n",
+        "occurrences = {}\n",
+        "for value in example_dict.values():\n",
+        "    if value in occurrences:\n",
+        "        occurrences[value] += 1\n",
+        "    else:\n",
+        "        occurrences[value] = 1\n",
+        "\n",
+        "print(\"Occurrences of elements in dictionary values:\", occurrences)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aRAuJbuO-bO2",
+        "outputId": "fb6878e0-0b7a-42db-9045-ddee81242f86"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Occurrences of elements in dictionary values: {1: 2, 2: 2, 3: 1}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Mathematical Programs\n"
+      ],
+      "metadata": {
+        "id": "4RhNK6n4-zXk"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.Check if a number is prime or not\n",
+        "\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "\n",
+        "if num > 1:\n",
+        "    for i in range(2, int(num**0.5) + 1):\n",
+        "        if num % i == 0:\n",
+        "            print(num, \"is not a prime number\")\n",
+        "            break\n",
+        "    else:\n",
+        "        print(num, \"is a prime number\")\n",
+        "else:\n",
+        "    print(num, \"is not a prime number\")"
+      ],
+      "metadata": {
+        "id": "ybrWfKEH-0kb",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "outputId": "7394e537-5697-43f7-e42e-b17684758f2e"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 7\n",
+            "7 is a prime number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2.Find the sum of digits of a number (eg: input: 1234 and output: 10)\n",
+        "\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "total = 0\n",
+        "\n",
+        "while num > 0:\n",
+        "    digit = num % 10\n",
+        "    total += digit\n",
+        "    num //= 10\n",
+        "\n",
+        "print(\"Sum of digits:\", total)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "w-7DcYOojLR0",
+        "outputId": "9038211d-b21e-4c59-a04b-4b4c8d8daf13"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 2345\n",
+            "Sum of digits: 14\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3.Find the LCM of two numbers\n",
+        "def gcd(a, b):\n",
+        "    while b:\n",
+        "        a, b = b, a % b\n",
+        "    return a\n",
+        "\n",
+        "def lcm(a, b):\n",
+        "    return (a * b) // gcd(a, b)\n",
+        "\n",
+        "num1 = int(input(\"Enter first number: \"))\n",
+        "num2 = int(input(\"Enter second number: \"))\n",
+        "\n",
+        "print(\"LCM of\", num1, \"and\", num2, \"is\", lcm(num1, num2))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "oGiY-ILljxDW",
+        "outputId": "115e5546-7e69-4198-f072-19526e62aa9b"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 13\n",
+            "Enter second number: 15\n",
+            "LCM of 13 and 15 is 195\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Find the GCD of two numbers\n",
+        "\n",
+        "num1 = int(input(\"Enter first number: \"))\n",
+        "num2 = int(input(\"Enter second number: \"))\n",
+        "\n",
+        "while num2:\n",
+        "    num1, num2 = num2, num1 % num2\n",
+        "\n",
+        "print(\"GCD is:\", num1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "LubnJxlwj-Ug",
+        "outputId": "e6b73383-cc3e-447e-d374-48deb2ef5f57"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 10\n",
+            "Enter second number: 8\n",
+            "GCD is: 2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Functions"
+      ],
+      "metadata": {
+        "id": "zmk4t07bki00"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.Define a function to find the sum of two numbers\n",
+        "\n",
+        "def add(a, b):\n",
+        "    return a + b\n",
+        "num1 = int(input(\"Enter first number: \"))\n",
+        "num2 = int(input(\"Enter second number: \"))\n",
+        "print(\"Sum:\", add(num1, num2))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "tF7OtsGEkxau",
+        "outputId": "c25c8a60-f531-4ba9-aca5-a26076318b01"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 10\n",
+            "Enter second number: 12\n",
+            "Sum: 22\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2.Define a function to return the square of a number\n",
+        "def square(num):\n",
+        "    return num ** 2\n",
+        "n = int(input(\"Enter a number: \"))\n",
+        "print(\"Square:\", square(n))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "nD7ONX_8lPOP",
+        "outputId": "866edb51-fc4b-4888-869f-3245260b346b"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 9\n",
+            "Square: 81\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3.Define a function with default arguments\n",
+        "def greet(name=\"Guest\"):\n",
+        "    print(\"Hello\", name + \"!\")\n",
+        "\n",
+        "# Example usage\n",
+        "greet(\"Meghana Reddy\")\n",
+        "greet()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "Yg_8adD-mJ3m",
+        "outputId": "5dfecd40-c828-487e-8cb0-e0bf05a2b32f"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello Meghana Reddy!\n",
+            "Hello Guest!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Define a function with variable-length arguments\n",
+        "\n",
+        "def total_sum(*numbers):\n",
+        "    return sum(numbers)\n",
+        "print(\"Sum:\", total_sum(2, 4, 6))\n",
+        "print(\"Sum:\", total_sum(10, 20, 30, 40))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "zCe6jNU9nONC",
+        "outputId": "c9e8834f-50c8-4d1d-e27b-85b40fb6ef7a"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Sum: 12\n",
+            "Sum: 100\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Define a function that returns multiple values\n",
+        "\n",
+        "def calculate(a, b):\n",
+        "    add = a + b\n",
+        "    sub = a - b\n",
+        "    mul = a * b\n",
+        "    return add, sub, mul\n",
+        "x = int(input(\"Enter first number: \"))\n",
+        "y = int(input(\"Enter second number: \"))\n",
+        "\n",
+        "add_result, sub_result, mul_result = calculate(x, y)\n",
+        "print(\"Addition:\", add_result)\n",
+        "print(\"Subtraction:\", sub_result)\n",
+        "print(\"Multiplication:\", mul_result)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "RKNNzA0noeX6",
+        "outputId": "e7f8fbba-afd3-4809-8018-a04f2bbc30a1"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 9\n",
+            "Enter second number: 8\n",
+            "Addition: 17\n",
+            "Subtraction: 1\n",
+            "Multiplication: 72\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Lambda Functions"
+      ],
+      "metadata": {
+        "id": "moLx2czBpXdz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.Use a lambda function to add two numbers\n",
+        "\n",
+        "add = lambda a, b: a + b\n",
+        "\n",
+        "x = int(input(\"Enter first number: \"))\n",
+        "y = int(input(\"Enter second number: \"))\n",
+        "print(\"Sum:\", add(x, y))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "dlAJ37dPpk1q",
+        "outputId": "6eb46669-5abd-4545-c03c-573fb64ce585"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 12\n",
+            "Enter second number: 15\n",
+            "Sum: 27\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2.Use a lambda function to find the maximum of two numbers\n",
+        "\n",
+        "maximum = lambda a, b: a if a > b else b\n",
+        "\n",
+        "x = int(input(\"Enter first number: \"))\n",
+        "y = int(input(\"Enter second number: \"))\n",
+        "print(\"Maximum:\", maximum(x, y))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "SJSAXa1Rp_8r",
+        "outputId": "8e5f6adc-2baf-4deb-d338-9a3c053895ef"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 10\n",
+            "Enter second number: 5\n",
+            "Maximum: 10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3.Use a lambda function to square a number\n",
+        "\n",
+        "square = lambda n: n ** 2\n",
+        "\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "print(\"Square:\", square(num))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "-_JeW9JQqUFO",
+        "outputId": "195e62ad-949b-4926-d4c2-03b63660449d"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 8\n",
+            "Square: 64\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Use a lambda function inside map()\n",
+        "numbers = [1, 2, 3, 4, 5]\n",
+        "squares = list(map(lambda x: x ** 2, numbers))\n",
+        "\n",
+        "print(\"Original list:\", numbers)\n",
+        "print(\"Squares:\", squares)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "jRvY_vG6qebO",
+        "outputId": "227ff258-3ea1-4d67-ba86-69c1afd6c5ca"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Original list: [1, 2, 3, 4, 5]\n",
+            "Squares: [1, 4, 9, 16, 25]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Use a lambda function inside filter()\n",
+        "\n",
+        "numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "even_numbers = list(filter(lambda x: x % 2 == 0, numbers))\n",
+        "\n",
+        "print(\"Original list:\", numbers)\n",
+        "print(\"Even numbers:\", even_numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "9PxqWU3Vq7Ad",
+        "outputId": "4ded88ac-a8d1-4b72-c74f-2de03ccea3ce"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Original list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+            "Even numbers: [2, 4, 6, 8, 10]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "List Comprehensions"
+      ],
+      "metadata": {
+        "id": "aqSUnLvJrRfE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.Generate a list of squares using list comprehension\n",
+        "numbers = [1, 2, 3, 4, 5]\n",
+        "squares = [x**2 for x in numbers]\n",
+        "\n",
+        "print(\"Original list:\", numbers)\n",
+        "print(\"Squares:\", squares)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "RhMH9jkNreKW",
+        "outputId": "82347f67-07f3-4327-aa7c-c8b2aaaaab64"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Original list: [1, 2, 3, 4, 5]\n",
+            "Squares: [1, 4, 9, 16, 25]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2.Generate a list of even numbers using list comprehension\n",
+        "even_numbers = [x for x in range(1, 21) if x % 2 == 0]\n",
+        "\n",
+        "print(\"Even numbers from 1 to 20:\", even_numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "ilwiEvF4ry46",
+        "outputId": "ff4a2295-bc22-4f0e-c914-35dfd5638703"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Even numbers from 1 to 20: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3.Reverse a list using list comprehension\n",
+        "numbers = [1, 2, 3, 4, 5]\n",
+        "reversed_list = [numbers[i] for i in range(len(numbers)-1, -1, -1)]\n",
+        "\n",
+        "print(\"Original list:\", numbers)\n",
+        "print(\"Reversed list:\", reversed_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "YUBPAZNGsAKA",
+        "outputId": "47e60652-5cce-49f5-bd7b-1b1006f23e10"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Original list: [1, 2, 3, 4, 5]\n",
+            "Reversed list: [5, 4, 3, 2, 1]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Flatten a nested list using list comprehension\n",
+        "nested = [[1, 2], [3, 4], [5, 6]]\n",
+        "flattened = [num for sublist in nested for num in sublist]\n",
+        "\n",
+        "print(\"Nested list:\", nested)\n",
+        "print(\"Flattened list:\", flattened)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "KCRc58_2tJ4t",
+        "outputId": "c264836f-bc8e-4d32-d257-49a5764e0b0e"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Nested list: [[1, 2], [3, 4], [5, 6]]\n",
+            "Flattened list: [1, 2, 3, 4, 5, 6]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Find common elements in two lists using list comprehension\n",
+        "list1 = [1, 2, 3, 4, 5]\n",
+        "list2 = [4, 5, 6, 7, 8]\n",
+        "\n",
+        "common = [x for x in list1 if x in list2]\n",
+        "\n",
+        "print(\"List1:\", list1)\n",
+        "print(\"List2:\", list2)\n",
+        "print(\"Common elements:\", common)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "N1ddOK6GtZK3",
+        "outputId": "748241a2-166a-4838-e687-6761949fc5cb"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "List1: [1, 2, 3, 4, 5]\n",
+            "List2: [4, 5, 6, 7, 8]\n",
+            "Common elements: [4, 5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Miscellaneous"
+      ],
+      "metadata": {
+        "id": "PIjn2g61tuGU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.Swap two numbers without using a third variable\n",
+        "a = int(input(\"Enter first number: \"))\n",
+        "b = int(input(\"Enter second number: \"))\n",
+        "a, b = b, a  # Swapping\n",
+        "print(\"After swapping: a =\", a, \"b =\", b)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "3NtNnngRt2ky",
+        "outputId": "a4b524c1-b1ee-49e8-d799-25c280a5b789"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 9\n",
+            "Enter second number: 4\n",
+            "After swapping: a = 4 b = 9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2.Count occurrences of each word in a sentence\n",
+        "sentence = input(\"Enter a sentence: \")\n",
+        "words = sentence.split()\n",
+        "word_count = {}\n",
+        "\n",
+        "for word in words:\n",
+        "    word = word.lower()\n",
+        "    word_count[word] = word_count.get(word, 0) + 1\n",
+        "\n",
+        "print(\"Word occurrences:\", word_count)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "-7hZgdmguUn9",
+        "outputId": "9c98e0b3-a694-4821-94fe-c39b85b7705b"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a sentence: Python is a high-level, general-purpose programming language.\n",
+            "Word occurrences: {'python': 1, 'is': 1, 'a': 1, 'high-level,': 1, 'general-purpose': 1, 'programming': 1, 'language.': 1}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3.Find the second largest number in a list\n",
+        "numbers = [10, 25, 5, 30, 20]\n",
+        "numbers = list(set(numbers))\n",
+        "numbers.sort()\n",
+        "\n",
+        "if len(numbers) >= 2:\n",
+        "    print(\"Second largest number:\", numbers[-2])\n",
+        "else:\n",
+        "    print(\"List doesn't have a second largest number\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "aBXOt29puh6F",
+        "outputId": "ea3bc81d-98df-4065-9957-15587c9f25f4"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Second largest number: 25\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4.Check if two strings are anagrams\n",
+        "str1 = input(\"Enter first string: \").replace(\" \", \"\").lower()\n",
+        "str2 = input(\"Enter second string: \").replace(\" \", \"\").lower()\n",
+        "\n",
+        "if sorted(str1) == sorted(str2):\n",
+        "    print(\"The strings are anagrams\")\n",
+        "else:\n",
+        "    print(\"The strings are not anagrams\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "U_EEfS_avqII",
+        "outputId": "4c2e270b-f476-4ef9-a803-98b322380cf1"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first string: listen\n",
+            "Enter second string: silent\n",
+            "The strings are anagrams\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5.Print Pascal's Triangle\n",
+        "n = int(input(\"Enter number of rows: \"))\n",
+        "for i in range(n):\n",
+        "    num = 1\n",
+        "    print(\" \" * (n - i), end=\"\")\n",
+        "    for j in range(i + 1):\n",
+        "        print(num, end=\" \")\n",
+        "        num = num * (i - j) // (j + 1)\n",
+        "    print()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "m-CzsYrnwNyf",
+        "outputId": "21d415ed-45f7-4209-a941-8226a449befb"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number of rows: 5\n",
+            "     1 \n",
+            "    1 1 \n",
+            "   1 2 1 \n",
+            "  1 3 3 1 \n",
+            " 1 4 6 4 1 \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "4Z_CW-q6wbY4"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
